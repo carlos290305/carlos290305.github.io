@@ -1,0 +1,309 @@
+/* Estilos CSS */
+:root {
+    --color-primary: #082a4b;       
+    --color-secondary: #ff8210;     
+    --color-accent: #c42126;        
+    --color-text: #000000;          
+    --color-light-bg: #dad3c6;      
+    --color-dark-bg: #272d2d;       
+    --color-bg: #FAF6E9;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- INICIO: ESTILOS MODO OSCURO --- */
+body.dark-mode {
+    background-color: var(--color-dark-bg);
+    color: #f1f1f1;
+}
+
+body.dark-mode .product-card,
+body.dark-mode .about,
+body.dark-mode .cajita-receta,
+body.dark-mode .modal-content {
+    background-color: #384040;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .section-title {
+    color: var(--color-secondary);
+}
+
+body.dark-mode .product-card h3,
+body.dark-mode .modal-header .modal-title {
+     color: var(--color-secondary) !important;
+}
+
+body.dark-mode .product-card p {
+    color: #ccc;
+}
+
+body.dark-mode .hero h2,
+body.dark-mode .hero p {
+    color: #f1f1f1 !important;
+}
+
+/* --- REGLAS DE BOTÓN PARA MODO OSCURO --- */
+body.dark-mode .btn.btn-primary-color {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+body.dark-mode .btn.btn-primary-color:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+/* --- FIN: ESTILOS MODO OSCURO --- */
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+}
+
+.navbar #darkModeToggle {
+    color: var(--color-secondary);
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+    line-height: 1;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.navbar #darkModeToggle:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1500x600/e74c3c/ffffff?text=Salsas+Mexicanas+Auténticas') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.btn {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* --- ESTILO DE BOTÓN RESTAURADO Y MEJORADO --- */
+.btn.btn-primary-color {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 10px 23px; /* Se ajusta el padding por el borde */
+}
+
+.btn.btn-primary-color:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #FFFDF6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+.about, .contact {
+    background-color: #FFFDF6;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    transition: background-color 0.3s;
+}
+
+footer {
+    background-color: #082a4b;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 50px;
+    transition: background-color 0.3s;
+}
+
+.carrusel {
+    padding: 2rem 1rem;
+}
+
+#carouselExampleIndicators {
+    max-width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-inner {
+    transition: height 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer ul a:hover {
+    transition: 0.3s ease-in-out;
+    color: #e67e22;
+}
+
+.cajita-receta {
+    display: flexbox;
+    justify-self: center;
+    background-color: #FFFDF6;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    width: 100%; 
+    background-color: transparent; 
+    box-shadow: none; 
+}
+
+.youtube {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.mapa {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.receta {
+    font-weight: bold;
+}
